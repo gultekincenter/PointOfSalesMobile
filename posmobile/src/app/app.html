@@ -1,0 +1,19 @@
+<ion-menu [content]="content">
+
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>My Movies Mobile</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list class="list">
+            <ion-item-divider>Options</ion-item-divider>
+            <button ion-item *ngFor="let p of menus | callback: filterMenu: false" (click)="openPage(p)">{{p.title}}</button>
+            <ion-item-divider>System</ion-item-divider>
+            <button ion-item *ngFor="let p of menus | callback: filterMenu: true" (click)="openPage(p)">{{p.title}}</button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

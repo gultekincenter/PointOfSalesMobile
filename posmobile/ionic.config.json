@@ -1,0 +1,7 @@
+{
+  "name": "posmobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
